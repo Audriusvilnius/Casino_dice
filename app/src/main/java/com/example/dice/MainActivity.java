@@ -2,7 +2,6 @@ package com.example.dice;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             Dice2.animate().translationY(transition_Y2).setDuration(duration).start();
             Dice2.animate().translationX(transition_X2).setDuration(duration).start();
             Dice2.setEnabled(false);    //Disable the button
-            boolean b = new Handler().postDelayed(() -> {
+            new Handler().postDelayed(() -> {
                 Dice1.setEnabled(true);
                 Dice2.setEnabled(true);
             }, 1000);   //Enable the button after 1 second
